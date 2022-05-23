@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <title>slide show using js</title>
+  </head>
+  <body>
+    
+    <main id="wall">
+    </main>
+
+    <script type="text/javascript">
+
+      /*---------FUNCTION fun1() CREATED TO TAKE A NUMBER BETWEEN THE RANGE OF 0-3 AN
+      PASS IT AS PARAMETER IN 'setTimeout()' with some delay.---------------*/
+      function fun1(){
+
+        //Genrating a random number b/w 0-3
+        var rand = Math.floor(Math.random() * 3);
+
+        //Calling funtion 'fun2()' with a delay of 3s and passing a parameter alog with it.
+        setTimeout(fun2,3000, rand);
+      }
+
+      /*function 'fun2()' is created to check the number so that according to the condition background image will change.*/
+      function fun2(take){
+        var u = document.getElementById('wall');
+        if(take==0){
+          u.style.backgroundImage = 'url("./photos/comman/img1.jpg")';
+        }else if (take==1) {
+          u.style.backgroundImage = 'url("./photos/comman/img2.jpg")';
+        }else if (take==2) {
+          u.style.backgroundImage = 'url("./photos/comman/img3.jpg")';
+        }else if (take==3) {
+          u.style.backgroundImage = 'url("./photos/comman/img4.jpg")';
+        }else{alert(0)}
+
+        //Calling the function 'fun1()' again so that the animation would run in an loop.
+        setTimeout(fun1,1000);
+      }
+
+      // calling function 'fun1()'
+      setTimeout(fun1);
+    </script>
+  </body>
+</html>

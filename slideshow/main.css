@@ -1,0 +1,22 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --darkblue: #14213d;
+  --yellow: #fca311;
+  --lightgray: #e5e5e5;
+}
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--black);
+}
+main{
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--darkblue);
+  background-image: url('./photos/comman/img1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
